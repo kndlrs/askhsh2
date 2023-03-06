@@ -1,0 +1,82 @@
+<html>
+
+<head>
+   <script src="a-frame.min-1.3.0.js"></script>
+</head>
+
+<body>  
+    <a-scene>
+        <a-assets>
+            <img id="texture" src="materials/floorTexture.jpg" />
+            <img id="sketch" src="materials/sxedio.jpg" />
+        </a-assets>
+        <a-sky color="green"></a-sky>
+       
+        <!-- wallBottom-->
+        <a-plane 
+                 position="0 0 0" 
+                 rotation="-90 0 0" 
+                 height="20" 
+                 width="20"
+                 src="#texture">
+                 
+                
+        </a-plane>
+         
+        <!--wallFront-->
+        <a-box 
+               position="0 2 -9.9" 
+               color="white" 
+               width="20" 
+               height="6" 
+               depth="0.2">
+        </a-box>
+        <!--wallBack-->
+        <a-box 
+               position="0 2 9.9" 
+               color="white" 
+               width="20" 
+               height="6" 
+               depth="0.2">
+        </a-box>
+        <!--wallRight-->
+        <a-box
+               rotation="0 90 0"
+               position="9.9 2 0" 
+               color="white" 
+               width="20" 
+               height="6" 
+               depth="0.2">
+        </a-box> 
+        <!--wallLeft-->
+        <a-box
+               rotation="0 90 0"
+               position="-9.9 2 0"
+               color="white" 
+               width="20" 
+               height="6" 
+               depth="0.2">
+        </a-box> 
+       
+        
+        <!--objects-->
+        <a-sphere 
+                  position="3.5 2 5" 
+                  radius="1.25" 
+                  color="red"></a-sphere>
+        <a-cylinder 
+                    position="-3.5 2 -5" 
+                    radius="2"
+                    height="2"
+                    color="blue"></a-cylinder>
+        <a-plane
+                 position="2 2.5 -9.7"
+                 rotation="0 0 0" 
+                 height="4" 
+                 width="3"
+                 src="#sketch"></a-plane>
+                 
+        
+	</a-scene>
+</body>   
+</html>
